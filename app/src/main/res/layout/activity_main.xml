@@ -42,8 +42,11 @@
         android:layout_height="wrap_content"
         android:text="@string/text_ou8" />
 
-    <com.google.android.gms.common.SignInButton
+
+    <TextView
+        android:id="@+id/textcad1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="@string/text_cad" />
 
 </LinearLayout>

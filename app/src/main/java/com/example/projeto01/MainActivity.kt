@@ -1,5 +1,8 @@
 package com.example.projeto01
 
+import android.annotation.SuppressLint
+import android.app.Activity
+import android.app.Instrumentation.ActivityResult
 import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +10,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import com.example.projeto01.databinding.ActivityMainBinding
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
@@ -41,6 +45,14 @@ class MainActivity : AppCompatActivity() {
                 loginUsuarioESenha(
                     binding.editTextUsuario.text.toString(),
                     binding.editTextSenha.text.toString()) }
+        }
+
+        binding.textcad1.setOnClickListener{
+            val intent = Intent(this,
+                SignUp::class.java)
+            startActivity(intent)
+
+            finish()
         }
 
     }
@@ -81,6 +93,7 @@ class MainActivity : AppCompatActivity() {
 
         finish()
     }
+    @SuppressLint("SuspiciousIndentation")
     public override fun onStart() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.

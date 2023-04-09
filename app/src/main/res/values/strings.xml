@@ -1,8 +1,17 @@
 <resources>
     <string name="app_name">projeto01</string>
+    <string name="text_bemvindo">Bem vindo, Cadastre-s para continiuar</string>
     <string name="edit_usuario">Usuário</string>
+    <string name="edit_usuariocad">Usuário</string>
     <string name="edit_senha">Senha</string>
+    <string name="edit_senhacad">Senha</string>
+    <string name="edit_confsenhacad">Confirme a Senha</string>
+    <string name="edit_confirma_senha">Confirme a Senha</string>
     <string name="botao_entrar">Entrar</string>
+    <string name="botao_cadastrar">Cadastrar</string>
+    <string name="text_tenhocad">Ja tenho cadastro</string>
     <string name="text_ou8">ou</string>
+    <string name="text_cad">Cadastrar</string>
     <string name="sair">Sair</string>
+
 </resources>
