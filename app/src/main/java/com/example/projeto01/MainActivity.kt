@@ -84,8 +84,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun abrePrincipal(){
-        binding.editTextUsuario.text.clear()
-        binding.editTextSenha.text.clear()
+        limpacampos()
 
         val intent = Intent(this,
             PrincipalActivity::class.java)
@@ -93,6 +92,12 @@ class MainActivity : AppCompatActivity() {
 
         finish()
     }
+
+    private fun limpacampos() {
+        binding.editTextUsuario.text.clear()
+        binding.editTextSenha.text.clear()
+    }
+
     @SuppressLint("SuspiciousIndentation")
     public override fun onStart() {
         super.onStart()

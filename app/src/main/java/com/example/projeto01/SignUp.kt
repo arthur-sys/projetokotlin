@@ -38,21 +38,29 @@ class SignUp : AppCompatActivity() {
         }
 
         binding.possuicadastro.setOnClickListener{
-            val intent = Intent(this,
-                MainActivity::class.java)
-            startActivity(intent)
-
-            finish()
+            abrirprincipal()
         }
 
     }
+
+    private fun abrirprincipal() {
+        val intent = Intent(
+            this,
+            MainActivity::class.java
+        )
+        startActivity(intent)
+
+        finish()
+    }
+
     private fun criarUsuarioESenha(email: String,senha : String){
         auth.createUserWithEmailAndPassword(email,senha).addOnCompleteListener(this){
             task->
             if(task.isSuccessful){
-                Toast.makeText(
-                    baseContext, "Usuario criado com sucesso",
+                Toast.makeText(baseContext, "Usuario criado com sucesso",
                     Toast.LENGTH_SHORT).show()
+                limpacaposcad()
+                    abrirprincipal()
             }else {
                 Toast.makeText(
                     baseContext, "Erro na criação do usuario ",
@@ -60,5 +68,10 @@ class SignUp : AppCompatActivity() {
             }
         }
 
+    }
+
+    private fun limpacaposcad() {
+        binding.editTextUsuariocad.text.clear()
+        binding.editTextUsuariocad.text.clear()
     }
 }
